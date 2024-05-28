@@ -2,8 +2,8 @@ resource "aws_instance" "expence" {
     count= length(var.instance_name)
     ami =var.image_id
     vpc_security_group_ids =[aws_security_group.allow_ssh.id]
-    instance_type = var.instance_name[count.index]=="db" ? "t2.small" : "t2.micro"
-    tags = merge(
+    instance_type = var.instance_name[count.index]== "db" ? "t2.small" : "t2.micro"
+    tags =merge(
         var.common_tags,{
             name=var.instance_name[count.index]
             module= var.instance_name[count.index]

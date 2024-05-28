@@ -11,6 +11,7 @@ resource "aws_instance" "db_creation" {
 resource "aws_security_group" "allow_ssh" {
     name="allow_ssh"
     description = "allow ssh access"
+    # this is block
     ingress { #inbond security group
         from_port        = 22
         to_port          = 22
