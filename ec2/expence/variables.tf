@@ -1,5 +1,5 @@
 #ec2 instance variable
-variable "instance_name" {
+variable "instance_names" {
     type = list
     default = ["db","backend","frontend"]
 }
