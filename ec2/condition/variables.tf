@@ -1,4 +1,4 @@
-variable "image_id" {
+/* variable "image_id" {
     type = string
     default = "ami-090252cbe067a9e58"
     description = "RHEL-9 ami image id"
@@ -9,5 +9,10 @@ variable "instance_type" {
 }
 variable "instance_name" {
     default = "backend"
+  
+} */
+variable "instance_names" {
+    type =list
+    default = ["db","backend","frontend"]
   
 }
